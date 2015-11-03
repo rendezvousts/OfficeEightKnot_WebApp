@@ -1,0 +1,730 @@
+@CHARSET "UTF-8";
+
+/*************************************************************************************
+
+								 ページ全体
+
+**************************************************************************************/
+body {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	background-color: #ffffff;
+}
+
+/*************************************************************************************
+
+								  レイアウト
+
+**************************************************************************************/
+
+/* 全体 */
+.wrapper {
+	margin: 0 auto 0 auto;
+	width: 1920px;
+}
+
+/* メニューバー */
+.menuBar {
+	margin: 0 auto 0 auto;
+	width: 1920px;
+	height: 50px;
+	position: fixed;
+	background-color: #222222;
+	z-index: 100;
+}
+
+/* ロゴの配置 */
+.logo {
+	margin-left: 30px;
+}
+
+/* メニューバー上の配置管理 */
+#logo {
+	float: left;
+}
+
+/* メニューバー上の文字列リンクの管理 */
+a.global_menu {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/* メニューバー上の文字列リンク マウスオーバー時の管理 */
+a.global_menu:hover {
+	color: #097df5;
+	text-decoration: none;
+}
+
+/* 登録内容表示 */
+.content {
+	float: left;
+	width: 900px;
+	height: 870px;
+	margin-top: 50px;
+	margin-right: 0px;
+	margin-left: 110px;
+	z-index: 2;
+}
+
+/* 契約履歴表示 */
+.contract_status {
+	float: left;
+	width: 800px;
+	height: 870px;
+	margin-top: 50px;
+	background-color: #ff3399;
+	z-index: 1;
+}
+
+/* float 解除 */
+.clear {
+	clear: both;
+}
+
+/* フッター */
+.footer {
+	width: 1920px;
+	height: 75px;
+	background-color: #00cc33;
+}
+
+/*************************************************************************************
+
+								  SlideBar(左右のメニューボタン)
+
+**************************************************************************************/
+
+/* 左上メニューボタン */
+#slideLeft {
+	width: 50px;
+	height: 50px;
+	margin-top: 0px;
+	float: left;
+	cursor: pointer;
+}
+
+/* 右上メニューボタン */
+#slideRight {
+	width: 50px;
+	height: 50px;
+	margin-top: 0px;
+	float: right;
+	cursor: pointer;
+}
+
+/* 左メニュー 位置指定 */
+#right_menu {
+	margin-top: 50px;
+}
+
+/*************************************************************************************
+
+								 SlideBar(表示するリスト)
+
+**************************************************************************************/
+.right_ul {
+	margin-left: -40px;
+}
+
+/*************************************************************************************
+
+								アカウントの設定
+
+**************************************************************************************/
+
+/* アカウント画像の配置 */
+.idImage {
+	width: 160px;
+	height: 160px;
+	margin-left: 110px;
+	margin-top: 15px;
+}
+
+/* アカウントの配置 */
+.idName {
+	width: 335px;
+	height: 60px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+/* タイトル画像の配置 */
+.title {
+	width: 300px;
+	height: 50px;
+	margin-left: 35px;
+	margin-top: 20px;
+}
+
+/*************************************************************************************
+
+								左メニューリスト
+
+**************************************************************************************/
+dl#menu_left {
+	list-style-type: none;
+	margin-left: 0px
+}
+
+#menu_left dt {
+	display: block;
+	width: 382px;
+	height: 60px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: 1px 0px 1px 0px;
+	border-color: #373737;
+}
+
+#menu_left dd {
+	width: 250px;
+	height: 60px;
+	/* border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: 1px 0px 1px 0px;
+	border-color : #373737; */
+	display: none;
+}
+
+#menu_left dt.last {
+	width: 382px;
+	height: 60px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: 1px 0px 0px 0px;
+	border-color: #373737;
+}
+
+a.else {
+	background-color: #222222;
+	color: #fff;
+	display: block;
+	width: 360px;
+	height: 60px;
+	padding-top: 20px;
+	padding-left: 20px;
+	text-decoration: none;
+}
+
+a.else:hover {
+	background-color: #373737;
+	color: #097df5;
+	border-left-style: solid;
+	border-width: 0px 0px 0px 3px;
+	border-color: #097df5;
+}
+
+a.last {
+	font-size: 15px;
+	background-color: #222222;
+	color: #fff;
+	display: block;
+	width: 360px;
+	height: 40px;
+	padding-top: 20px;
+	padding-left: 20px;
+	text-decoration: none;
+}
+
+a.last:hover {
+	border-style: none;
+}
+
+a.multiple {
+	background-color: #222222;
+	color: #fff;
+	display: block;
+	width: 360px;
+	height: 40px;
+	padding-top: 20px;
+	padding-left: 20px;
+	text-decoration: none;
+}
+
+a.multiple:hover {
+	background-color: #373737;
+	color: #097df5;
+	border-left-style: solid;
+	border-width: 0px 0px 0px 3px;
+	border-color: #097df5;
+}
+
+a.child {
+	background-color: #222222;
+	color: #fff;
+	display: block;
+	width: 360px;
+	height: 60px;
+	padding-top: 20px;
+	padding-left: 20px;
+	text-decoration: none;
+}
+
+a.child:hover {
+	background-color: #373737;
+	color: #ff0683;
+	border-left-style: solid;
+	border-width: 0px 0px 0px 3px;
+	border-color: #ff0683;
+}
+
+/*************************************************************************************
+
+								右メニューリスト
+
+**************************************************************************************/
+ul#menu_right {
+	list-style-type: none;
+	margin-left: 0px
+}
+
+#menu_right li {
+	width: 382px;
+	height: 60px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: 1px 0px 1px 0px;
+	border-color: #373737;
+}
+
+#menu_right li.last {
+	width: 382px;
+	height: 60px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: 1px 0px 0px 0px;
+	border-color: #373737;
+}
+
+#menu_right a {
+	font-size: 20px;
+}
+
+a.last_right {
+	background-color: #222222;
+	color: #fff;
+	display: block;
+	width: 360px;
+	height: 60px;
+	padding-top: 20px;
+	padding-left: 20px;
+	text-decoration: none;
+}
+
+a.last_right:hover {
+	height: 40px;
+	background-color: #373737;
+	color: #097df5;
+	border-left-style: solid;
+	border-width: 0px 0px 0px 3px;
+	border-color: #097df5;
+}
+
+/*************************************************************************************
+
+								グローバルメニュー
+
+**************************************************************************************/
+#dropmenu {
+	list-style-type: none;
+	width: 800px;
+	height: 45px;
+	margin: 0px 0px 0px 1000px;
+	padding: 0;
+	background: #222222;
+	border-bottom: 5px solid #097df5;
+	border-radius: 0px 0px 0 0;
+}
+
+#dropmenu li {
+	position: relative;
+	width: 20%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#dropmenu li a {
+	display: block;
+	margin: 0;
+	padding: 17px 0 13px;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 1;
+	text-decoration: none;
+}
+
+#dropmenu li:hover>a {
+	background: #097df5;
+	color: #f97c00;
+}
+
+#dropmenu>li:hover>a {
+	border-radius: 3px 3px 0 0;
+}
+
+#dropmenu li ul {
+	list-style: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	border-radius: 0 0 3px 3px;
+}
+
+#dropmenu li:last-child ul {
+	left: -100%;
+	width: 100%
+}
+
+#dropmenu li ul li {
+	overflow: hidden;
+	width: 200%;
+	height: 0;
+	color: #fff;
+	-moz-transition: .2s;
+	-webkit-transition: .2s;
+	-o-transition: .2s;
+	-ms-transition: .2s;
+	transition: .2s;
+}
+
+#dropmenu li ul li a {
+	padding: 13px 15px;
+	background: #097df5;
+	text-align: left;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+#dropmenu li:hover ul li {
+	overflow: visible;
+	height: 38px;
+	border-top: 1px solid #0080ff;
+	border-bottom: 1px solid #007bb7;
+}
+
+#dropmenu li:hover ul li:first-child {
+	border-top: 0;
+}
+
+#dropmenu li:hover ul li:last-child {
+	border-bottom: 0;
+}
+
+#dropmenu li:hover ul li:last-child a {
+	border-radius: 0 0 3px 3px;
+}
+
+/*************************************************************************************
+
+							顧客登録欄レイアウト
+
+**************************************************************************************/
+.regist_content {
+	margin-top: 50px;
+}
+
+.box1 {
+	width: 270px;
+	height: 30px;
+	float: left;
+}
+
+.box2 {
+	width: 330px;
+	height: 30px;
+	margin-left: 200px;
+	float: left;
+}
+
+.box3 {
+	width: 270px;
+	height: 30px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box4 {
+	width: 280px;
+	height: 30px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box5 {
+	width: 210px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
+
+.box6 {
+	width: 280px;
+	height: 30px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box7 {
+	width: 210px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
+
+.box8 {
+	width: 160px;
+	height: 25px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box9 {
+	width: 170px;
+	height: 25px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box10 {
+	width: 70px;
+	height: 25px;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
+
+.box11 {
+	width: 70px;
+	height: 25px;
+	margin-top: 20px;
+	margin-left: 10px;
+	float: left;
+}
+
+.box12 {
+	width: 120px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 300px;
+	float: left;
+}
+
+.box13 {
+	width: 290px;
+	height: 30px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box14 {
+	width: 290px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 50px;
+	float: left;
+}
+
+.box15 {
+	width: 290px;
+	height: 30px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box16 {
+	width: 240px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 50px;
+	float: left;
+}
+
+.box17 {
+	width: 800px;
+	height: 30px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box18 {
+	width: 300px;
+	height: 30px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box19 {
+	width: 290px;
+	height: 30px;
+	margin-top: 20px;
+	margin-left: 50px;
+	float: left;
+}
+
+.box20 {
+	width: 60px;
+	height: 20px;
+	margin-top: 20px;
+	float: left;
+}
+
+.box21 {
+	width: 800px;
+	height: 300px;
+	margin-top: 5px;
+	float: left;
+}
+
+/*************************************************************************************
+
+							テキストフォームのデザイン
+
+**************************************************************************************/
+
+/* テキストフォーム全体の表示 */
+input[type=text] {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border: #a9a9a9 1px solid;
+	-moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px
+		rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px
+		rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.3);
+	width: 200px;
+	height: 25px;
+	padding: 0 3px;
+}
+
+input[type=text]:focus {
+	border: solid 1px #20b2aa;
+}
+
+input[type=text], select {
+	outline: none;
+}
+
+/* 都道府県入力欄の大きさ */
+input#purefecture {
+	width: 150px;
+}
+
+/* 年齢入力欄の大きさ */
+input#age {
+	width: 50px;
+}
+
+/* 住所力欄の大きさ */
+input#address {
+	width: 710px;
+}
+
+/* 顧客メモ入力欄の大きさ */
+textarea {
+	width: 790px;
+	height: 290px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border: #a9a9a9 1px solid;
+	-moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px
+		rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px
+		rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.3);
+	padding: 0 3px;
+}
+
+/* セレクトボックス全体の表示 */
+select {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-o-border-radius: 5px;
+	-ms-border-radius: 5px;
+	border: #a9a9a9 1px solid;
+	-moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px
+		rgba(0, 0, 0, 0.3);
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px
+		rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.3);
+	width: 200px;
+	height: 25px;
+	padding: 0 3px;
+	background: #222222;
+	color: #ffffff;
+}
+
+/* 性別セレクトボックスの大きさ */
+select#gender {
+	width: 80px;
+}
+
+/* 生年月日（年）セレクトボックスの大きさ */
+select#year {
+	width: 80px;
+}
+/* 生年月日（月）セレクトボックスの大きさ */
+select#month {
+	width: 50px;
+}
+/* 生年月日（日）セレクトボックスの大きさ */
+select#day {
+	width: 50px;
+}
+
+/*************************************************************************************
+
+								購入履歴表示
+
+**************************************************************************************/
+
+.full_content {
+        width:508px;
+        height:380px;
+        position:relative;
+        margin:10px auto;
+        clear:both;
+}
+.menu2{
+        width:100px;
+        height:25px;
+        background:#9C9;
+        float:left;
+        list-style:none;
+        padding:10px 0 0;
+        margin-left:2px;
+        text-align:center;
+        display:block;
+        cursor: pointer;
+        color:#FFF;
+}
+.menu2:first-child {
+        margin-left:0;
+}
+.active, .hover {
+        background:#6CC;
+        font-weight:bold;
+}
+.contents {
+        width:478px;
+        height:320px;
+        border:#6CC 5px solid;
+        background:#FFF;
+        top:32px;
+        left:0;
+        padding:10px;
+        position:absolute;
+}

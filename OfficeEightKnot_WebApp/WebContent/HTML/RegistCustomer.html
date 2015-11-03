@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" type="text/css" href="../CSS/style.css">
+<link rel="stylesheet" type="text/css" href="../CSS/slidebars.min.css">
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script
+	src="https://ajaxzip3.googlecode.com/svn/trunk/ajaxzip3/ajaxzip3-https.js"
+	charset="UTF-8"></script>
+<script src="../JS/slidebars.min.js"></script>
+<script src="../JS/modernizr.custom.04022.js"></script>
+<!-- 呼び出し方法のやり方 調査 -->
+<!-- <script src="../JS/ageCalculation.js" type="text/javascript"></script> -->
+<title>顧客登録</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div id="sb-site">
+
+			<!-- メニューバー -->
+			<div class="menuBar">
+				<img src="../img/Menu.png" id="slideLeft"
+					class="menu sb-toggle-left" onClick="SlidebarLeftOpen()">
+				<div id="logo">
+					<img src="../img/Logo.png" class="logo">
+				</div>
+				<img src="../img/Menu2.png" id="slideRight"
+					class="menu sb-toggle-right" onClick="SlidebarRightOpen()">
+
+				<!-- グローバルメニュー -->
+				<ul id="dropmenu">
+					<li><a href="#">契約作成</a>
+						<ul>
+							<li><a href="#">サブメニュー</a></li>
+							<li><a href="#">サブメニュー</a></li>
+							<li><a href="#">サブメニュー</a></li>
+							<li><a href="#">サブメニュー</a></li>
+						</ul></li>
+					<li><a href="#">顧客検索</a>
+						<ul>
+							<li><a href="#">サブメニュー</a></li>
+							<li><a href="#">サブメニュー</a></li>
+							<li><a href="#">サブメニュー</a></li>
+							<li><a href="#">サブメニュー</a></li>
+						</ul></li>
+					<li><a href="#">顧客登録</a>
+						<ul>
+							<li><a href="#">サブメニュー</a></li>
+							<li><a href="#">サブメニュー</a></li>
+							<li><a href="#">サブメニュー</a></li>
+						</ul></li>
+					<li><a href="#">在庫管理</a>
+						<ul>
+							<li><a href="#">商品追加</a></li>
+							<li><a href="#">在庫整理</a></li>
+						</ul></li>
+					<li><a href="#">売上管理</a>
+						<ul>
+							<li><a href="#">売上一覧</a></li>
+							<li><a href="#">帳票出力</a></li>
+						</ul></li>
+				</ul>
+			</div>
+
+			<!-- 顧客登録入力欄 -->
+			<div class="content">
+				<div class="regist_content">
+					<form action="" method="post" id="customer_regist_form"
+						name="customer_regist_form">
+
+						<div class="box1">
+							顧客No <input id="customer_no" type="text" placeholder="顧客No">
+						</div>
+
+						<div class="box2">
+							Yahoo Japan ID <input id="yahoo_japan_id" type="text"
+								placeholder="Yahoo Japan ID">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box3">
+							顧客ID <input id="customer_id" type="text" placeholder="顧客ID">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box4">
+							顧客名 <input id="last_name" type="text" placeholder="姓">
+						</div>
+
+						<div class="box5">
+							<input id="first_name" type="text" placeholder="名">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box6">
+							ふりがな <input id="last_name_kana" type="text" placeholder="せい">
+						</div>
+
+						<div class="box7">
+							<input id="first_name_kana" type="text" placeholder="めい">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box8">
+							性別 <select id="gender">
+								<option value="0">未選択</option>
+								<option value="1">男性</option>
+								<option value="2">女性</option>
+							</select>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box9">
+							生年月日 <select id="year" name="year"><option value="1900">1900</option></select>年
+						</div>
+
+						<div class="box10">
+							<select id="month" name="month"><option value="1">1</option></select>月
+						</div>
+
+						<div class="box11">
+							<select id="day" name="days"><option value="1">1</option></select>日
+						</div>
+
+						<div class="box12">
+							年齢 <input id="age" name="age" type="text">歳​
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box13">
+							電話番号 <input id="phone_number" type="text" placeholder="phone:">
+						</div>
+
+						<div class="box14">
+							携帯番号 <input id="mobile_phone_number" type="text"
+								placeholder="mobile phone:">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box15">
+							郵便番号 <input id="postal_number" type="text" placeholder="郵便番号"
+								onKeyUp="AjaxZip3.zip2addr(this,'','pref01','addr01');">
+						</div>
+
+						<div class="box16">
+							都道府県 <input id="purefecture" type="text" placeholder="都道府県"
+								name="pref01">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box17">
+							市区町村 <input id="address" type="text" placeholder="市区町村"
+								name="addr01">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box18">
+							携帯メール <input id="phone_mail_address" type="text"
+								placeholder="mobile phone:">
+						</div>
+
+						<div class="box19">
+							PCメール <input id="pc_mail_address" type="text" placeholder="PC:">
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="box20">顧客メモ</div>
+
+						<div class="clear"></div>
+
+						<div class="box21">
+							<textarea id="customer_memo" placeholder="特記事項、クレーム処理等"></textarea>
+						</div>
+
+						<div class="clear"></div>
+
+					</form>
+				</div>
+			</div>
+
+
+			<!-- 購入履歴表示欄 -->
+			<div class="contract_status">
+				<div class="full_content">
+					<div class="menu2 active">ホーム</div>
+					<div class="contents">ここに内容が入ります。</div>
+
+					<div class="menu2">画像</div>
+					<div class="contents">ここに内容が入ります。2</div>
+
+					<div class="menu2">リンク</div>
+					<div class="contents">ここに内容が入ります。3</div>
+
+					<div class="menu2">入力</div>
+					<div class="contents">ここに内容が入ります。4</div>
+
+					<div class="menu2">テーブル</div>
+					<div class="contents">ここに内容が入ります。5</div>
+				</div>
+			</div>
+
+			<!-- float解除 -->
+			<div class="clear"></div>
+
+			<!-- フッター -->
+			<div class="footer">フッター</div>
+
+		</div>
+	</div>
+
+	<!-- ▼左側から表示されるメニューまたはコンテンツ▼ -->
+	<!-- ▼リストの最後の要素のリストとリンクにはclass="last"およびclass="last"を付与▼ -->
+	<div class="sb-slidebar sb-left">
+		<div class="title">
+			<img src="../img/OfficeEightKnotWeb.png">
+		</div>
+		<nav>
+			<dl id="menu_left" class="sb-menu" style="list-style: none">
+				<dt>
+					<a href="" class="else">HOME</a>
+				</dt>
+				<dt>
+					<a href="" class="else">契約作成</a>
+				</dt>
+				<dt>
+					<a href="" class="else">顧客検索</a>
+				</dt>
+				<dt>
+					<a href="" class="else">顧客登録</a>
+				</dt>
+				<dt>
+					<a class="multiple">在庫管理</a>
+				</dt>
+				<dd class="child_element">
+					<a href="" class="child">商品追加</a>
+				</dd>
+				<dd class="child_element">
+					<a href="" class="child">在庫整理</a>
+				</dd>
+				<dt>
+					<a class="multiple">売上管理</a>
+				</dt>
+				<dd class="child_element">
+					<a href="" class="child">売上一覧</a>
+				</dd>
+				<dd class="child_element">
+					<a href="" class="child">帳票出力</a>
+				</dd>
+				<dt class="last">
+					<a class="last">Office Eeight Knot Web &copy; 2015 Taisei
+						Shinagawa</a>
+				</dt>
+			</dl>
+		</nav>
+	</div>
+
+	<!-- ▲左側から表示されるメニューまたはコンテンツ▲ -->
+	<!-- ▼右側から表示されるメニューまたはコンテンツ▼ -->
+	<div id="right_menu" class="sb-slidebar sb-right sb-style-overlay">
+		<div class="idImage">
+			<img src="../img/YUKI.png">
+		</div>
+		<div class="idName">
+			<img src="../img/name.png">
+		</div>
+		<div class="right_ul">
+			<ul id="menu_right" class="sb-menu" style="list-style: none">
+				<li><a href="" class="else">Home</a></li>
+				<li><a href="" class="else">Twitter</a></li>
+				<li><a href="" class="else">Facebook</a></li>
+				<li class="last"><a class="last_right">Google +</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- ▲右側から表示されるメニューまたはコンテンツ▲ -->
+
+	<!-- JavaScript記述 -->
+	<script>
+		$(function() {
+			$("#top_menu dt").on("click", function() {
+				$(this).nextUntil('dt', '.child_element').slideToggle("fast");
+			});
+		});
+	</script>
+	<script>
+		$(function() {
+			$("#menu_left dt").on("click", function() {
+				$(this).nextUntil('dt', '.child_element').slideToggle("fast");
+			});
+		});
+	</script>
+	<!-- Slidebars -->
+	<script>
+		function SlidebarLeftOpen() {
+			$.slidebars();
+		};
+		SS
+	</script>
+	<script>
+		function SlidebarRightOpen() {
+			$.slidebars();
+		};
+		SS
+	</script>
+	<script>
+		var time = new Date();
+		var year = time.getFullYear();
+		//操作年まで表示
+		for (var i = 1901; i <= year; i++) {
+			$('#year').append('<option value="' + i + '">' + i + '</option>');
+		}
+		//2～12の数字を生成
+		for (var i = 2; i <= 12; i++) {
+			$('#month').append('<option value="' + i + '">' + i + '</option>');
+		}
+		//2～31の数字を生成
+		for (var i = 2; i <= 31; i++) {
+			$('#day').append('<option value="' + i + '">' + i + '</option>');
+		}
+	</script>
+	<script>
+		var formObj = '';
+
+		var zeroFormat = function(v, n) {
+			vl = String(v).length;
+			if (n > vl) {
+				return (new Array((n - vl) + 1).join(0)) + v;
+			} else {
+				return v;
+			}
+		};
+
+		var ageCalculator = function(year, month, day) {
+			var dateObj = new Date(), today = parseInt(''
+					+ dateObj.getFullYear()
+					+ zeroFormat(dateObj.getMonth() + 1, 2)
+					+ zeroFormat(dateObj.getDate(), 2)), birthday = parseInt(''
+					+ year + zeroFormat(month, 2) + zeroFormat(day, 2));
+
+			formObj.age.value = parseInt((today - birthday) / 10000);
+		};
+
+		var changeDate = function(mode) {
+			var tYear = formObj.year, tMonth = formObj.month, tDays = formObj.days, selectY = tYear.options[tYear.selectedIndex].value, selectM = tMonth.options[tMonth.selectedIndex].value, selectD = tDays.options[tDays.selectedIndex].value, dateObj, gDate, i;
+
+			if (mode === 'date') {
+				dateObj = new Date(selectY, selectM, 0);
+				gDate = dateObj.getDate();
+
+				tDays.length = 0;
+
+				for (i = 1; i <= gDate; i++) {
+					tDays.options[i] = new Option(i, i);
+				}
+
+				tDays.removeChild(tDays.options[0]);
+
+				if (selectD > tDays.length) {
+					tDays.options[tDays.length - 1].selected = true;
+				} else {
+					tDays.options[selectD - 1].selected = true;
+				}
+			}
+
+			ageCalculator(selectY, selectM, selectD);
+		};
+
+		window.onload = function() {
+			formObj = document.customer_regist_form;
+
+			// 年の選択変更時
+			formObj.year.onchange = function() {
+				changeDate('date');
+			};
+
+			// 月の選択変更時
+			formObj.month.onchange = function() {
+				changeDate('date');
+			};
+
+			// 日の選択変更時
+			formObj.days.onchange = function() {
+				changeDate('age');
+			};
+		};
+	</script>
+	<script type="text/javascript">
+		$(function() {
+			$(".contents:not('.active + .contents')").hide();
+			$(".menu2").hover(function() {
+				$(this).addClass("hover")
+			}, function() {
+				$(this).removeClass("hover")
+			});
+			$(".menu2").click(function() {
+				$(".menu2").removeClass("active");
+				$(this).addClass("active");
+				$(".contents:not('.active + .contents')").fadeOut();
+				$(".active + .contents").fadeIn();
+			});
+		});
+	</script>
+</body>
+</html>
